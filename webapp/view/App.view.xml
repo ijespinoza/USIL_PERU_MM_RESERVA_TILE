@@ -1,0 +1,32 @@
+<mvc:View controllerName="com.indra.gestionreservatile.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:ui="sap.suite.ui.microchart"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <GenericTile
+        header="{i18n>appTitleParent}"
+        frameType="TwoByOne"
+        subheader="{/Subheader}"
+        state="{/State}"
+        press="onPress"
+        width="100%"
+        headerImage="sap-icon://write-new-document">
+        <TileContent>
+            <content>
+                <ui:ComparisonMicroChart 
+                    data="{/TipoSolicitud}" 
+                    size="S"  
+                    shrinkable="true"
+                    width="100%"
+                    >
+                    <ui:data>
+                        <ui:ComparisonMicroChartData 
+                            title="{title}" 
+                            value="{valor}" 
+                            color="{status}" />
+                    </ui:data>
+                </ui:ComparisonMicroChart> 
+            </content>
+        </TileContent>
+    </GenericTile>
+</mvc:View>
