@@ -14,6 +14,31 @@
             "id": "@sap/generator-fiori:basic",
             "version": "1.10.6",
             "toolsId": "978f2219-9689-4e85-8875-fdb739bb7610"
+        },
+        "crossNavigation": {
+            "inbounds": {
+                "com-indra-gestionreclamosinbound": {
+                    "signature": {
+                        "parameters": {},
+                        "additionalParameters": "allowed"
+                    },
+                    "semanticObject": "GestionReclamos",
+                    "action": "Display",
+                    "title": "{{flpTitle}}",
+                    "subTitle": "{{flpSubtitle}}",
+                    "icon": "sap-icon://list"
+                }
+            }
+        },
+        "dataSources": {
+            "ZMMGS_REPORT_RESERV_SRV": {
+                "uri": "/sap/opu/odata/sap/ZMMGS_REPORT_RESERV_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "odataVersion": "2.0"
+                }
+            }
         }
     },
     "sap.ui": {
@@ -62,6 +87,16 @@
                 "type": "sap.ui.model.json.JSONModel",
                 "preload": true,
                 "settings": {}
+            },
+            "ZMMGS_REPORT_RESERV_SRV":{
+                "preload": true,
+                "dataSource": "ZMMGS_REPORT_RESERV_SRV",
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
             }
         },
         "resources": {
